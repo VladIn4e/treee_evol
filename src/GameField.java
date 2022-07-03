@@ -10,8 +10,9 @@ public class GameField extends JPanel implements ActionListener {
     private final int HEIGHT = 800;
     private final int offshoot_koll = 1;
     private Timer timer;
+    private  Graphics graphics;
     public ArrayList<Offshoot> offshoots = new ArrayList<>(1);
-    public ArrayList<Integer> woods = new ArrayList<>(1);
+    public ArrayList<Wood> wood = new ArrayList<>(1);
 
     public GameField() {
         setBackground(Color.BLACK);
@@ -39,27 +40,27 @@ public class GameField extends JPanel implements ActionListener {
     }
 
     public void make()  {
-        /**
-         * что тто написано
-         */
+
     }
 
-    public void drawWood() {
-        /**
-         * что тто написаноw
-         */
+    public void drawWood(Graphics g) {
+        for(int i = 0; i < wood.size(); i++){
+            int x = wood.get(i).x;
+            int y = wood.get(i).y;
+            int width = wood.get(i).width;
+            int height = wood.get(i).height;
+            g.fillRect(x,y,width,height);
+        }
     }
 
     public void drawOffshoot() {
-        /**
-         * что тто написаноw
-         */
+
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         make();
-        drawWood();
+        drawWood(graphics);
         drawOffshoot();
         repaint();
     }
