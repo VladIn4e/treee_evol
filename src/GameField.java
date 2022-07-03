@@ -51,7 +51,9 @@ public class GameField extends JPanel implements ActionListener {
     }
 
     public void drawOffshoot() {
-
+        /**
+         * что тто написаноw
+         */
     }
 
     @Override
