@@ -39,7 +39,9 @@ public class GameField extends JPanel implements ActionListener {
     }
 
     public void make()  {
-
+        /**
+         * что тто написано
+         */
     }
 
     public void drawWood() {
