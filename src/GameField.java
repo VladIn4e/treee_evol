@@ -40,28 +40,27 @@ public class GameField extends JPanel implements ActionListener {
     }
 
     public void make()  {
-
     }
 
     public void drawWood(Graphics g) {
         for(int i = 0; i < wood.size(); i++){
             int x = wood.get(i).x;
             int y = wood.get(i).y;
-            int width = wood.get(i).width;
-            int height = wood.get(i).height;
-            g.fillRect(x,y,width,height);
+            g.fillRect(x,y,10,10);
         }
     }
 
-    public void drawOffshoot() {
+    public void drawOffshoot(Graphics g) {
+        for(int i = 0; i < offshoots.size(); i++){
 
+        }
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         make();
         drawWood(graphics);
-        drawOffshoot();
+        drawOffshoot(graphics);
         repaint();
     }
 }
