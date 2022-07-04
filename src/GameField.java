@@ -46,13 +46,17 @@ public class GameField extends JPanel implements ActionListener {
         for(int i = 0; i < wood.size(); i++){
             int x = wood.get(i).x;
             int y = wood.get(i).y;
+            g.setColor(wood.get(i).randomColor);
             g.fillRect(x,y,10,10);
         }
     }
 
     public void drawOffshoot(Graphics g) {
-        for(int i = 0; i < offshoots.size(); i++){
-
+        for(int i = 0; i < wood.size(); i++){
+            int x = wood.get(i).x;
+            int y = wood.get(i).y;
+            g.setColor(Color.WHITE);
+            g.fillRect(x,y,10,10);
         }
     }
 
